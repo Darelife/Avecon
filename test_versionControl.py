@@ -13,7 +13,7 @@ from versionControl import ChangeChunk, VersionControl
 # How: Initialize a colocated JJ/Git repository and seed one text file.
 # Why: The public implementation is specifically a JJ adapter, so tests should
 #      exercise its actual command boundary rather than only mock subprocesses.
-class VersionControlTestMixin:
+class VersionControlTestMixin(unittest.TestCase):
 
 	# What: Create an isolated repository before each test.
 	# How: Use TemporaryDirectory and jj git init, then write predictable content.
